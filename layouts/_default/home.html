@@ -23,7 +23,7 @@
 {{ end }}
 
 {{ define "main" }}
-
+{{ .Content }}
   {{ $paginator := .Scratch.Get "paginator" }}
 
   {{ range $paginator.Pages }}
