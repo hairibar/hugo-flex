@@ -1,0 +1,23 @@
+<article>
+    {{ partial "heading.html" . }}
+    <div style="display: flex">
+      {{ if .Params.thumbnail }}
+        <a style="width: 300px; padding-right: 6px" href="{{ .RelPermalink }}">
+          <img src="{{ .Params.thumbnail }}">
+        </a>
+      {{ end }}
+      <div>
+        {{ if site.Params.summaries }}
+          {{ .Summary }}
+          {{ if .Truncated }}
+            <p>
+              <a class="u-clickable" href="{{ .RelPermalink }}">Read More…</a>
+            </p>
+          {{ end }}
+        {{ else }}
+          {{ .Content }}
+        {{ end }}
+        {{ partial "tags.html" . }}
+      </div>
+    </div>
+  </article>

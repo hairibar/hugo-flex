@@ -27,20 +27,7 @@
   {{ $paginator := .Scratch.Get "paginator" }}
 
   {{ range $paginator.Pages }}
-    <article>
-      {{ partial "heading.html" . }}
-      {{ if site.Params.summaries }}
-        {{ .Summary }}
-        {{ if .Truncated }}
-          <p>
-            <a class="u-clickable" href="{{ .RelPermalink }}">Read More…</a>
-          </p>
-        {{ end }}
-      {{ else }}
-        {{ .Content }}
-      {{ end }}
-      {{ partial "tags.html" . }}
-    </article>
+    {{ partial "FancyItemPreview.html" . }}
     {{ with site.Params.divider }}
       <div class="Divider"></div>
     {{ end }}

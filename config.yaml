@@ -1,6 +1,6 @@
 params:
-  color: teal           # Any color in CSS syntax
-  width: 42rem          # Any length in CSS syntax
+  color: purple           # Any color in CSS syntax
+  width: 60rem          # Any length in CSS syntax
   footer: >-            # A hardcoded space is needed before each html element
     Except where otherwise noted, content on this site is licensed under a &#32;
     <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative
